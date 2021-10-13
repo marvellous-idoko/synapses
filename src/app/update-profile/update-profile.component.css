@@ -1,0 +1,39 @@
+.pack-well{
+  max-width:fit-content;
+  margin:30px auto;
+  }
+#display{
+	position:relative;
+}
+#display__user__img{
+	min-height: 150px;
+    max-width: 150px;
+    width: 150px;
+    margin: auto;
+    border-radius: 50%;
+    border: 2px solid limegreen;
+}
+form{
+    margin: 3vh 0;
+}
+#edit{
+    background-color: limegreen;
+    color: white;
+    padding: 9px;
+    position: absolute;
+    right: 19%;
+    top: 71%;
+    box-shadow: 2px 2px #ccc;
+    border-radius: 50%;
+    width: 25px;
+    min-height: 25px;
+    text-align: center;
+    cursor: pointer;
+}
+#edit:hover{
+    background-color:green;
+}
+#for{
+    display: flex;
+    flex-direction: row;
+}

@@ -1,0 +1,32 @@
+body{
+	background-color:#121;
+	padding:300px;
+}
+.mmat-card-image{
+	margin-top: -10px;
+}
+.container{
+	margin:2% 5% 0;
+}
+.posts{   
+	border-radius: 10px;
+    width: 20em;
+    margin: 7% 4%;
+}
+.mat-card{
+	max-height: 12em;
+    min-height: 12em;
+}
+.body-container{
+	margin:10% 0 0 0;
+}
+@media (max-width: 599px){
+.mat-card {
+    padding: 10px 16px;
+}
+}
+@media (max-width:1000px){
+	.posts{
+		width:85%;
+	}
+}

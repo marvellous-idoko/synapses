@@ -1,0 +1,55 @@
+
+
+ 	<mat-card class="nav">
+		<nav>
+			<div class="container">
+			<div class="mat-tab-links" mat-tab-nav-bar>
+				<a class="mat-tab-link  ng-star-inserted n" mat-tab-link routerLinkActive="active" 
+				routerLink="max/trending"  
+				#rla="routerLinkActive">
+					<span class="mat-button-wrapper">
+						<mat-icon>whatshot</mat-icon>
+						<div class="mat-button-ripple mat-ripple" mat-ripple></div>
+						<div class="mat-button-focus-overlay"></div>
+					</span>
+				</a>
+				<a class="mat-tab-link  ng-star-inserted n" mat-tab-link routerLinkActive="active"
+				routerLink="max/home" 
+				#rla="routerLinkActive">
+					<span class="mat-button-wrapper">
+						<mat-icon>home</mat-icon>
+						<div class="mat-button-ripple mat-ripple" mat-ripple></div>
+						<div class="mat-button-focus-overlay"></div>
+					</span>
+				</a>
+				<a class="mat-tab-link  ng-star-inserted n" mat-tab-link routerLinkActive="active"
+				routerLink="max/window" 
+				#rla="routerLinkActive">
+					<span class="mat-button-wrapper">
+						<mat-icon>dashboard</mat-icon>
+						<div class="mat-button-ripple mat-ripple" mat-ripple></div>
+						<div class="mat-button-focus-overlay"></div>
+					</span>
+				</a>
+				 <div id="search-box">
+					<input matInput placeholder="Search 3MAX Here..."type="search">
+					<mat-icon matSuffix style="position: absolute; right: 20%;font-size: 155%!important;">search</mat-icon>
+				</div>
+				
+					<div id="user_detail_wrap">
+						<div mat-card-avatar id="user_img_cont">
+							<img mat-card-avatar  src="{{ (Service.user | async)?.photoURL}}" id="user_img">
+						</div>&nbsp; 
+						<div id="user_name"><strong *ngIf="Service.user | async" style="color:white;">
+								{{ (Service.user | async)?.displayName }}
+							</strong></div>
+					</div>
+					<div>
+						<div id="ws">
+							
+						</div>
+					</div>	
+			</div>
+			</div>
+		</nav>
+	</mat-card>

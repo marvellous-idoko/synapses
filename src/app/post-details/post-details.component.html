@@ -1,0 +1,46 @@
+<link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+<div *ngIf="fileUpload" class="main__container">
+	<section>
+		<mat-card>
+			<img src="{{fileUpload.img1.url}}" mat-card-image>
+		</mat-card>
+		<h4>{{fileUpload.topic}}</h4>
+	</section>
+	<div>
+		<p>{{fileUpload.content}}</p>
+	</div>
+	<section class="u{pdate__post">
+		<a href="#commentBox">
+			<div class="comment">
+				<mat-icon>comment</mat-icon>Comment
+			</div>
+		</a>
+		<div class="like">
+			<mat-icon>thumb_up</mat-icon> Like</div>
+	</section>
+	<br>
+	<br>
+	<br>
+	<div *ngFor="let comment of fileUploads">
+		<table>
+			<tr>
+				<td class="user__img">
+					<img src="{{comment.userpix}}" alt="de" class="userImg"/>
+				</td>
+				<td>
+					<tr>
+						<strong>{{comment.username}}</strong>
+					</tr>
+					<tr style="color:black;">{{comment.comment}}</tr>
+				</td>
+			</tr>
+		</table>
+	</div>
+	<section>
+		<form #commentBox="ngForm" (ngSubmit)="comment(commentBox)" class="form-group">
+			<textarea id="commentBox" matInput type="text" placeholder="comment" name="comment" ngModel></textarea>
+			<button mat-button type="submit"> Send Comment</button>
+		</form>
+	</section>
+
+</div>

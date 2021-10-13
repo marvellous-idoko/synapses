@@ -1,0 +1,256 @@
+#main{
+    display: flex;
+    max-width: 70%!important;
+    margin: 6% 15%;
+}
+.post__content{
+	background-color:#fff;
+	padding:1%;
+	border-radius:10px;
+}
+#side{
+	padding:1%;
+	position:sticky;
+    margin: 10% 2.5% 0 60%;
+    float: right;
+}
+
+@media (max-width:1000px){
+	#side{
+		display:none;
+	}
+	#main{
+        margin:0%;
+		min-width:100%;
+	}
+	
+	#collapse_cont{
+	display:inline-block!important;
+	}
+	#collapse{
+		visibility:visible!important;
+	}
+}
+#user_detail_wrap{
+    background-color: #75ea71;
+    padding: 10% 3%;
+}
+#user_name{
+    animation: 1.3s userNameAnime;
+    display:inline-block;
+    color: whitesmoke;
+}
+.user_img_cont{
+    
+    background-size: 100%;
+    background-repeat: no-repeat;
+    animation: 2s userImgAnime;
+    border:2px whitesmoke solid;
+    border-radius:50%;
+    display: inline-block;
+    min-width:40px;
+    height:40px;
+}
+
+.cancels::after{
+	visibility:hidden;
+	position: absolute;
+    content: "";
+    margin-top: 10px;
+    min-width: 30px;
+    min-height: 3px;
+    background-color: #fff;
+	}
+.cancels{
+		transition:.10s all;
+	transform: rotate(45deg);
+	margin-bottom:15px;
+	position:relative;
+	z-index:1;
+	max-width: 30px;
+    min-height: 3px;
+    background-color: #fff;
+}
+.cancels::before{
+	transform: rotate(90deg);
+    position: absolute;
+    content: "";
+    min-width: 30px;
+    min-height: 3px;
+    background-color: #fff;
+}
+mat-drawer{
+    padding: 0 !important;
+    height:100%!important;
+    min-height: 200%!important;
+}
+#search-box {
+	padding: 5%;
+    margin: 1.5% 1%;
+	font-size:15px;
+	border:2px solid;
+	border-color:#ccc;
+	background-color:#fff;
+    border-radius: 25px;
+    width: 100%!important;
+    height: 40px;
+}
+
+
+#collapse_cont{
+	position:static;
+    display:none;
+    cursor: pointer;
+    margin: 0 10%;
+}
+.cancel::after{
+	position: absolute;
+    content: "";
+    margin-top: 10px;
+    min-width: inherit;
+    min-height: inherit;
+    background-color: #fff;
+	}
+
+.cancel{
+	transition:.10s all;
+	display:inline-block;
+    z-index: 2;
+    min-width: 35px;
+    min-height: 5px;
+    background-color: #fff;
+}
+.cancel::before{
+    position: absolute;
+    content: "";
+    top: 17px;
+    min-width: inherit;
+    min-height: inherit;
+    background-color: #fff;
+}
+#collapse::after{
+	position: absolute;
+    content: "";
+    margin-top: 7px;
+    min-width: inherit;
+    min-height: inherit;
+    background-color: black;
+	}
+
+#collapse{
+    cursor:pointer;
+    margin: auto;
+    position:fixed;
+	right:4%;
+	top:2.56%;
+    z-index: 2;
+    visibility: hidden;
+    min-width: 27px;
+    min-height: 3px;
+    background-color: black;
+}
+#collapse::before{
+    position: absolute;
+    content: "";
+    top: -7px;
+    min-width: inherit;
+    min-height: inherit;
+    background-color: black;
+}
+mat-drawer-container{
+    min-height:100%!important;
+    min-height: 100%!important;
+    background-color:initial;
+}
+
+#ul {
+    padding:0!important;
+    margin:0!important;
+}
+.animeLinks li{
+    margin: 4% 1.1%;
+    cursor: pointer;
+    padding: 3px 5px;
+    list-style: none;
+    background-color: #75ea71;
+}
+.animeLinks{
+    color:white;
+    text-decoration: none;
+    position: relative;
+    animation: animLink; 
+}
+#link1{
+    animation-duration: 0.8s;
+}
+
+#link2{
+    animation-duration: 1s;
+}
+
+#link3{
+    animation-duration: 1.2s;
+}
+
+#link4{
+    animation-duration: 1.4s;
+}
+@keyframes animLink{
+    0% {
+      
+        left:80%;
+        top:0px;
+    }
+    100%{
+        top: 0px;
+        left: 0px;
+    }
+}
+@keyframes userNameAnime{
+        0%{
+            color:#75ea71;
+        }
+        100%{
+            color:#75ea71;
+            
+        }
+    }
+@keyframes userImgAnime{
+       0%{
+       width: 60px;
+       height: 60px;
+       margin: 0 30%;
+
+    } 
+    50%{
+        width: 60px;
+        height: 60px;
+        margin: 0 30%;
+ 
+     }
+     63%{
+        width: 54px;
+        height: 54px;
+ 
+     }
+     75%{
+        width:47px;
+        height: 47px;
+ 
+     }
+     
+     80%{
+        width:43px;
+        height: 43px;
+ 
+     }
+   100%{
+        min-width: 40px;
+        height: 40px;
+        margin: 0;
+        position: relative;
+        right:0;
+
+    }
+
+}

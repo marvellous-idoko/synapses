@@ -1,0 +1,49 @@
+.main__container{
+	font-family: 'Roboto', sans-serif;
+	margin-top:15%;
+	background-color:white;
+	max-width:75%;
+}
+section{
+	margin:2%;
+	padding:2%;
+}
+.userImg{
+	height: 2em;
+	width: 2em;
+	border-radius: 50%;
+}
+td{
+	margin:1em;
+}
+@media (max-width:1000px){
+	.main__container{
+		max-width:95%;
+		margin:15% auto;
+	}
+}
+.comment{
+	cursor:pointer;
+	margin:5%;
+	color:#75ea71;
+	float: right;
+}
+.like{
+	cursor:pointer;
+	margin:5%;
+	float:left;
+}
+#commentBox:focus{
+	border:2px solid #75ea71;
+}
+#commentBox{
+	width:100%;
+	display:block;
+	border:1px solid #ccc;
+}
+.user__img{
+	max-width:70px;
+	max-height:70px;
+	border-radius:50%;
+	border-color:#75ea71;
+}

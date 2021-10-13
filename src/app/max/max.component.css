@@ -1,0 +1,31 @@
+#gpacker{
+    margin: auto;
+}
+#post{ 
+	color:white;
+    box-shadow: 0px 0px 15px 3px #fff;
+    min-width: 60px;
+    min-height: 60px;
+    font-size: 125%;
+    border-radius: 50%;
+    background-color: #75ea71;
+    position: fixed;
+    bottom: 1%;
+    right: 1%;
+    z-index: 25;
+    text-align: center;
+    cursor: pointer;
+}
+#send{
+	transform: rotate(205deg);
+    font-size: 174%;
+    position: absolute;
+    bottom: 17.5%;
+    right: 25.2%;
+}	
+@media(width:1200px){
+    #gpaacker{
+        max-width: 70%;
+        margin:auto;
+    }
+}

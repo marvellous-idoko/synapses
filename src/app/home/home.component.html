@@ -1,0 +1,10 @@
+<div class="container">
+			<mat-card class="posts" *ngFor="let file of fileUploads">
+			  <mat-card-header>
+				<img mat-card-avatar src="{{file.post.userpix}}">
+				<mat-card-title><strong>{{file.post.username}}</strong></mat-card-title>
+				<mat-card-subtitle>{{file.date}}</mat-card-subtitle>
+			  </mat-card-header>
+				<app-post-pane [fileUpload]='file'></app-post-pane> 
+			</mat-card>
+</div>		

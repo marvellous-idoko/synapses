@@ -1,0 +1,43 @@
+<div id="bg-black">
+	<div id="pkg">
+		<form #postForm="ngForm" (ngSubmit)="post(postForm)" class="form-group" style="color:white; margin-top:20%;">
+			<div>
+				<mat-form-field>
+					<input matInput style="color:black;" type="text" placeholder="topic" name="topic" ngModel>
+				</mat-form-field>
+				<br><br><br><br>
+				<mat-form-field>
+					<textarea matInput style="color:black;" type="text" placeholder="content" name="content" rows="10"
+						ngModel></textarea>
+				</mat-form-field>
+				<br>
+				<div *ngIf="file" class="progress">
+					<!-- <div mat-progress-bar mode="determinate" -->
+					<!-- role="progressbar" attr.aria-valuenow="{{progress.percentage}}" -->
+					<!-- aria-valuemin="0" aria-valuemax="100" -->
+					<!-- [ngStyle]="{width:progress.percentage+'%'}"> -->
+					<!-- {{progress.percentage}}%</div> -->
+					<div>
+						<mat-spinner strokeWidth="5" [diameter]="60" color="accent"></mat-spinner>
+						<br>
+						<p style="color:aliceblue">Hold on a bit</p>
+
+					</div>
+
+				</div>
+
+				<input 
+				style="display:none;" 
+				type="file" 
+				accept="image/jpeg,image/png,image/webp,image/gif,video/mp4,video/quicktime,video/webm" (change)="selectFile($event)"
+				multiple="multiple"
+				#fileInput><br><br>
+				<!-- <button id="display__on__image__select" >Image picked</button> -->
+				<div style="display: flex;">
+					<button style="float:left;" type="button" mat-button (click)="fileInput.click()">Add Image</button>
+					<button mat-button (click)="post(postForm)" >Post</button>
+				</div>
+			</div>
+		</form>
+	</div>
+</div>

@@ -1,0 +1,14 @@
+*{
+ background: #fff;
+}
+a:hover{
+	color:#ccc;
+}
+a{
+	font-family: 'Ubuntu', sans-serif;
+	text-decoration:none;
+	color: #75ea71;
+}
+.anchor{
+	margin:5%;
+}

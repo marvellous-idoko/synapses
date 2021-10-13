@@ -1,0 +1,34 @@
+<div class="pack-well">
+	<input style="display:none;" type="file" class="mat-button" (change)="selectFile($event)" #fileInput>
+	<br>
+	<br>
+	<div id="display">
+		<div id="display__user__img">
+
+		</div>
+		<span id="edit" (click)="fileInput.click()">edit</span>
+	</div>
+	
+	<button style="float:right;" mat-button [disabled]="!selectedFiles" (click)="upload_profile_photo()">Update</button>
+	<br>
+	<br>
+	<div>
+
+		<form #commentBox="ngForm" id="for" (ngSubmit)="comment(commentBox)" class="form-group">
+			<textarea id="commentBox" matInput type="text" placeholder="Update User name" name="userName" ngModel></textarea>
+			<button mat-button type="submit"> update</button>
+		</form>
+		<form #commentBox="ngForm" id="for" (ngSubmit)="comment(commentBox)" class="form-group">
+			<textarea id="commentBox" matInput type="text" placeholder="Update User name" name="userName" ngModel></textarea>
+			<button mat-button type="submit"> update</button>
+		</form><form #commentBox="ngForm" id="for" (ngSubmit)="comment(commentBox)" class="form-group">
+			<textarea id="commentBox" matInput type="text" placeholder="Update User name" name="userName" ngModel></textarea>
+			<button mat-button type="submit"> update</button>
+		</form>
+		<form #commentBox="ngForm" id="for" (ngSubmit)="comment(commentBox)" class="form-group">
+			<textarea id="commentBox" matInput type="text" placeholder="Update User name" name="userName" ngModel></textarea>
+			<button mat-button type="submit"> update</button>
+		</form>
+		
+	</div>
+</div>

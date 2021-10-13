@@ -1,0 +1,60 @@
+<mat-drawer-container [hasBackdrop]="true">
+	<app-nav></app-nav>
+	 <style>
+	 .mat-drawer-content{
+	 overflow: hidden!important;
+	 }
+	</style>
+
+	<div id="collapse_cont" (click)=" btn.click();">
+		<div id="collapse" (click)="drawer.toggle();"></div>
+	</div>
+	<app-side-bar id="side"></app-side-bar>
+	<app-max id="main"></app-max>
+	<mat-drawer #drawer mode="side" style="padding:20px 10px;" position="end">
+
+		<div id="user_detail_wrap">
+			<div  (click)=" btn.click();">
+				<div (click)="drawer.toggle()">
+					<div (click)="status = !status" [ngClass]="status ? 'cancel' : 'cancels'"></div>
+				</div>
+			</div>
+			<br>
+			<div  *ngIf="showFillerr" >
+				<img src="{{ (Service.user | async)?.photoURL}};" class="user_img_cont" *ngIf="showFillerr"/>
+			</div>
+			&nbsp;
+			<div  *ngIf="showFillerr" id="user_name">
+				<strong  *ngIf="Service.user | async">
+					{{ (Service.user | async)?.displayName }}
+				</strong>
+			</div>
+		</div>
+		<br>
+		<br>
+		<input #searchBox (click)="search()" id="search-box" placeholder="Search Synapse here..." type="search">
+		<br>
+		<br>
+		<button (click)="showFillerr = !showFillerr" style="display:none;" #btn></button>
+		<ul id="ul" #ull *ngIf="showFillerr">
+
+			<a class="animeLink animeLinks" id="link1" routerLink="max/trending">
+				<li>Trending</li>
+			</a>
+			<a class=" animeLink animeLinks" id="link2" routerLink="max/home">
+				<li>Home</li>
+			</a>
+			<a class=" animeLink animeLinks" id="link3" routerLink="max/window">
+				<li>Window</li>
+			</a>
+
+			<a class=" animeLink animeLinks" id="link4" routerLink="max/update-profile">
+				<li>Update Profile</li>
+			</a>
+		</ul>
+		<p *ngIf="showFiller">Fuck Off</p>
+		<button (click)="showFiller = !showFiller" mat-raised-button>
+			Toggle extra text
+		</button>
+	</mat-drawer>
+</mat-drawer-container>

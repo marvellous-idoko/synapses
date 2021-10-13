@@ -1,0 +1,9 @@
+
+  .logo {
+    width: 100px;
+    height: 100px; 
+    background-image:url ('assets/img/mat-logo.png');
+	background-position:center;
+	background-repeat:no-repeat; 
+  }
+	
